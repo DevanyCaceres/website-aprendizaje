@@ -12,15 +12,14 @@
     <header>
         <a href="#" class="logo">Pequeños Genios</a>
             <ul class="navbar">
-                <li><a href="inicio">Inicio</a></li>
+                <li><a href="inicio.html">Inicio</a></li>
                 <li><a href="#">Secciones</a></li>
-                <li><a href="#">Cuenta</a></li>
-                <button class="btnLogin-popup" onclick="openForm()">Log In</button>
-                <button class="btnRegister-popup" onclick="openForm()">Registrarse</button>
+                <button class="btnLogin-popup" onclick="openLogin()">Iniciar sesión</button>
+                <button class="btnRegister-popup" onclick="openRegister()">Registrarse</button>
                 </ul>
             </header>
             <div class="wrapper" id="Login">
-                <form action="/action_page.php">
+                <form action="">
                   <h1>Iniciar sesión</h1>
                   <div class="input-box">
                     <input type="text" placeholder="Usuario" required>
@@ -34,11 +33,41 @@
                     <label><input type="checkbox">Remember Me</label>
                     <a href="#">¿Olvidó su contraseña?</a>
                   </div>
-                  <button type="submit" class="btn">Login</button>
+                  <button type="submit" class="btn">Iniciar Sesión</button>
                   <div class="register-link">
                     <p>¿No tiene una cuenta? <a href="#">Cree una aquí</a></p>
                   </div>
                 </form>
+                <span class="close-icon" onclick="closeLogin()">
+                  <div class="bxx"><i class='bx bx-x' ></i></div>
+                </span>
+              </div>
+              <div class="wrapper" id="Register">
+                <form action="process-signup.php" method="post">
+                  <h1>Registrarse</h1>
+                  <div class="input-box">
+                    <input type="email" placeholder="Correo" required>
+                    <i class='bx bx-envelope'></i>
+                  </div>
+                  <div class="input-box">
+                    <input type="text" placeholder="Usuario" required>
+                    <i class='bx bxs-user'></i>
+                  </div>
+                  <div class="input-box">
+                    <input type="password" placeholder="Contraseña" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                  </div>
+                  <div class="remember-forgot">
+                    <label><input type="checkbox">Acepto los terminos y condiciones</label>
+                  </div>
+                  <button type="submit" class="btn">Crear cuenta</button>
+                  <div class="register-link">
+                    <p>¿Ya tiene una cuenta? <a href="#">Inicie sesión aquí</a></p>
+                  </div>
+                </form>
+                <span class="close-icon" onclick="closeRegister()">
+                  <div class="bxx"><i class='bx bx-x' ></i></div>
+                </span>
               </div>
               <script src="script.js"></script>
 </body>

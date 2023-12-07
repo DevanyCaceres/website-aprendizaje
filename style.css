@@ -22,6 +22,7 @@
     font-size: 2rem;
     font-weight: 700;
     color: red;
+    cursor: default;
 }
   body{
     display: flex;
@@ -38,9 +39,9 @@
 }
 .navbar a{
     position: relative;
-    color: #FFFFFF;
+    color: black;
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 800;
     margin-left: 45px;
 }
 .navbar a::after{
@@ -184,4 +185,12 @@
   }
   .register-link p a:hover{
     text-decoration: underline;
+  }
+  .close-icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
   }
